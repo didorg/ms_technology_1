@@ -1,4 +1,4 @@
-package com.didorg.restaurantms.persistance.domain;
+package com.didorg.restaurantms.persistence.domain;
 
 import javax.persistence.*;
 

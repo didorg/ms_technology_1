@@ -1,7 +1,8 @@
-package com.didorg.restaurantms.persistance.repository;
+package com.didorg.restaurantms.persistence.repository;
 
-import com.didorg.restaurantms.persistance.domain.Restaurant;
 import org.springframework.data.repository.PagingAndSortingRepository;
+
+import com.didorg.restaurantms.persistence.domain.Restaurant;
 
 public interface IRestaurantRepository extends PagingAndSortingRepository<Restaurant, Long> {
 }

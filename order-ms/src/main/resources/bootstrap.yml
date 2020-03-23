@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: orderMS
+  cloud:
+    config:
+      uri: http://localhost:8888
+      fail-fast: true
+  profiles:
+    active: dev
