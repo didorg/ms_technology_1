@@ -12,10 +12,11 @@
 - **Secure microservices** using **OAuth** through **Spring Cloud Security**
 - **Monitor microservices** through Turbine, **Sleuth and Zipkin**
 
+****************    
 - restaurant-ms
 - customer-ms
 - order-ms   
-
+****************
 resturant (id, restaurantName, restaurantLocation)  
 customer (id, customerName, customerLocation)  
 order (id, orderNumber, restaurantId, customerId, createdAt)  
