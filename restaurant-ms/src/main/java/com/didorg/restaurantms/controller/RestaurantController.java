@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.didorg.restaurantms.dto.RestaurantDTO;
@@ -33,13 +32,13 @@ public class RestaurantController {
 		this.service = service;		
 	}
 
-	@GetMapping
-	public ResponseEntity<?> getByRestaurantName(@RequestParam("name") String name) {
-		Optional<Restaurant> existingRestaurant = service.getRestaurantByName(name);
+	@GetMapping(value = "/{id}")
+	public ResponseEntity<?> getRestaurant(@PathVariable("id") String id){
+		Optional<Restaurant> existingRestaurant = service.getRestaurantById(id);
 		if (existingRestaurant.isPresent()) {
-			return ResponseEntity.status(HttpStatus.OK).body(existingRestaurant);
+			return ResponseEntity.status(HttpStatus.OK).body(existingRestaurant.get());
 		}else {
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Restaurant "+name+" does not exist");
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Restaurant with Id:"+id+" Does not exist");
 		}
 	}
 	
