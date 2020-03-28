@@ -60,7 +60,7 @@ public class RestaurantController {
 		Optional<Restaurant> existingRestaurant = service.getRestaurantById(restaurantDTO.getId());
 		if (existingRestaurant.isPresent()) {			
 			Restaurant restaurantMapped = this.mapper.mapperUpdate(existingRestaurant.get(), restaurantDTO);						
-			return ResponseEntity.status(HttpStatus.OK).body(this.service.saveRestaurant(restaurantMapped));
+			return ResponseEntity.status(HttpStatus.CREATED).body(this.service.saveRestaurant(restaurantMapped));
 		}else {
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Restaurant "+restaurantDTO.getId()+" does not exist");
 		}
