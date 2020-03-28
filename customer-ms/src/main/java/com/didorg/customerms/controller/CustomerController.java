@@ -61,7 +61,7 @@ public class CustomerController {
 		Optional<Customer> existingCustomer = service.getCustomerById(customerDTO.getId());
 		if (existingCustomer.isPresent()) {
 			Customer customerMapped = this.mapper.mapperUpdate(existingCustomer.get(), customerDTO);
-			return ResponseEntity.status(HttpStatus.OK).body(this.service.saveCustomer(customerMapped));
+			return ResponseEntity.status(HttpStatus.CREATED).body(this.service.saveCustomer(customerMapped));
 		} else {
 			return ResponseEntity.status(HttpStatus.NOT_FOUND)
 					.body("Customer " + customerDTO.getId() + " does not exist");
@@ -75,7 +75,7 @@ public class CustomerController {
 			this.service.deleteCustomer(id);
 			return ResponseEntity.status(HttpStatus.OK).body("Customer with Id: " + id + " was successfully deleted");
 		} else {
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Customer with Id:" + id + " Does not exist");
+			return ResponseEntity.status(HttpStatus.NO_CONTENT).body("Customer with Id:" + id + " Does not exist");
 		}
 	}
 
