@@ -73,7 +73,7 @@ public class RestaurantController {
 			this.service.deleteRestaurant(id);
 			return ResponseEntity.status(HttpStatus.OK).body("Restaurant with Id: "+id+" was successfully deleted");
 		}else {
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Restaurant with Id:"+id+" Does not exist");
+			return ResponseEntity.status(HttpStatus.NO_CONTENT).body("Restaurant with Id:"+id+" Does not exist");
 		}
 	}
 	
