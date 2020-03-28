@@ -20,7 +20,7 @@ import com.didorg.restaurantms.persistence.domain.Restaurant;
 import com.didorg.restaurantms.service.IRestaurantService;
 
 @RestController
-@RequestMapping(value = "/restaurant")
+@RequestMapping(value = "/restaurants")
 public class RestaurantController {
 	
 	private final RestaurantMapper mapper;

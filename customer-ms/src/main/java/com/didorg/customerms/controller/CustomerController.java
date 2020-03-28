@@ -20,7 +20,7 @@ import com.didorg.customerms.persistance.domain.Customer;
 import com.didorg.customerms.service.ICustomerService;
 
 @RestController
-@RequestMapping(value = "/customer")
+@RequestMapping(value = "/customers")
 public class CustomerController {
 
 	private final CustomerMapper mapper;
