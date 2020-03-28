@@ -49,7 +49,7 @@ public class RestaurantController {
 			Restaurant restaurantMapped = this.mapper.mapperRestaurantDtoToRestaurant(restaurantDTO);
 			Restaurant restaurantSaved = this.service.saveRestaurant(restaurantMapped); 
 			
-			return ResponseEntity.status(HttpStatus.OK).body(restaurantSaved);
+			return ResponseEntity.status(HttpStatus.CREATED).body(restaurantSaved);
 		}else {
 			return ResponseEntity.status(HttpStatus.FOUND).body("Restaurant "+restaurantDTO.getRestaurantName()+" already exist");
 		}

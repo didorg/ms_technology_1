@@ -49,7 +49,7 @@ public class CustomerController {
 			Customer customerMapped = this.mapper.mapperCustomerDtoToCustomer(customerDTO);
 			Customer customerSaved = this.service.saveCustomer(customerMapped);
 
-			return ResponseEntity.status(HttpStatus.OK).body(customerSaved);
+			return ResponseEntity.status(HttpStatus.CREATED).body(customerSaved);
 		} else {
 			return ResponseEntity.status(HttpStatus.FOUND)
 					.body("Customer " + customerDTO.getCustomerName() + " already exist");
