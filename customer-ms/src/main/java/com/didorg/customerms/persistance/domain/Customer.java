@@ -15,17 +15,13 @@ public class Customer {
     public Customer() {
     }
 
-    public Customer(String customerName, String customerLocation) {
-        this.customerName = customerName;
-        this.customerLocation = customerLocation;
-    }
+    public Customer(Long id, String customerName, String customerLocation) {
+		this.id = id;
+		this.customerName = customerName;
+		this.customerLocation = customerLocation;
+	}
 
-    public Customer(Long id, String restaurantName, String restaurantLocation) {
-        this.id = id;
-
-    }
-
-    public Long getId() {
+	public Long getId() {
         return id;
     }
 

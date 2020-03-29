@@ -75,7 +75,7 @@ public class CustomerController {
 			this.service.deleteCustomer(id);
 			return ResponseEntity.status(HttpStatus.OK).body("Customer with Id: " + id + " was successfully deleted");
 		} else {
-			return ResponseEntity.status(HttpStatus.NO_CONTENT).body("Customer with Id:" + id + " Does not exist");
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Customer with Id:" + id + " Does not exist");
 		}
 	}
 

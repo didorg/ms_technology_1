@@ -2,11 +2,7 @@ package com.didorg.orderms.persistence.domain;
 
 import java.util.Date;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class RestaurantOrder {
@@ -30,7 +26,6 @@ public class RestaurantOrder {
     }
 
     public RestaurantOrder(Long id, String orderNumber, String restaurantId, String customerId, Date createdAt) {
-		super();
 		this.id = id;
 		this.orderNumber = orderNumber;
 		this.restaurantId = restaurantId;
