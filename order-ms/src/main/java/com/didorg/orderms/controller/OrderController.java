@@ -15,7 +15,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.didorg.orderms.dto.OrderDTO;
+import com.didorg.orderms.dto.OrderResponse;
 import com.didorg.orderms.mapper.OrderMapper;
+import com.didorg.orderms.mapper.OrderResponseMapper;
 import com.didorg.orderms.persistence.domain.RestaurantOrder;
 import com.didorg.orderms.service.IOrderService;
 
@@ -25,11 +27,13 @@ public class OrderController {
 
 	private final IOrderService service;
 	private final OrderMapper mapper;
+	private final OrderResponseMapper mapperResponse;
 
 	@Autowired
-	public OrderController(IOrderService service, OrderMapper mapper) {
+	public OrderController(IOrderService service, OrderMapper mapper, OrderResponseMapper mapperResponse) {
 		this.service = service;
 		this.mapper = mapper;
+		this.mapperResponse = mapperResponse;
 	}
 
 	@GetMapping(value = "/{orderNumber}")
@@ -38,7 +42,8 @@ public class OrderController {
 		if (existingOrder.isPresent()) {
 			// TODO: This need to be done by API Composition pattern fetching customer and
 			// restaurant to compose the order
-			return ResponseEntity.status(HttpStatus.OK).body(existingOrder.get());
+			OrderResponse orderResponseDTO = this.mapperResponse.mapperOrderResponse(existingOrder.get());
+			return ResponseEntity.status(HttpStatus.OK).body(orderResponseDTO);
 		} else {
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Order with Id:" + orderNumber + " Does not exist");
 		}

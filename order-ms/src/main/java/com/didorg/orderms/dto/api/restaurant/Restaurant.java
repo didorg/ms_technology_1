@@ -1,9 +1,17 @@
 package com.didorg.orderms.dto.api.restaurant;
 
-public class RestaurantDTO {
-	private String restaurantName, restaurantLocation;
+public class Restaurant {
+	private String id, restaurantName, restaurantLocation;
 
-	public RestaurantDTO() {
+	public Restaurant() {
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
 	}
 
 	public String getRestaurantName() {

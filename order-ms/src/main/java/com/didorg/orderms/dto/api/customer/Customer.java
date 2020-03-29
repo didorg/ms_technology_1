@@ -1,9 +1,17 @@
 package com.didorg.orderms.dto.api.customer;
 
-public class CustomerDTO {
-	private String customerName, customerLocation;
+public class Customer {
+	private String id, customerName, customerLocation;
 
-	public CustomerDTO() {
+	public Customer() {
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
 	}
 
 	public String getCustomerName() {
