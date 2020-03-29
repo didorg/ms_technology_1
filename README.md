@@ -26,13 +26,16 @@ A customer -> places an order -> to a restaurant
 Suppose you are a driver and this is what you received to deliver an order to a client:
 ```
 order {
+        - id
 	- orderNumber
 	- createdAt
 	- customer {
+	  - id
 	  - customerName
 	  - customerLocation
 	}
 	- restaurant {
+	  - id
 	  - restaurantName
 	  - restaurantLocation
         }
