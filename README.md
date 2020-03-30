@@ -25,21 +25,21 @@ A customer -> places an order -> to a restaurant
 
 Suppose you are a driver and this is what you received to deliver an order to a client:
 ```
-order {
-        - id
-	- orderNumber
-	- createdAt
-	- customer {
-	  - id
-	  - customerName
-	  - customerLocation
-	}
-	- restaurant {
-	  - id
-	  - restaurantName
-	  - restaurantLocation
-        }
- }
+{
+    "id": "101001",
+    "orderNumber": "Ord-Nro-1",
+    "createdAt": "2020-03-29T01:30:19.396+0000",
+    "customer": {
+        "id": "101302",
+        "customerName": "Dan Jav",
+        "customerLocation": "345 Beautiful Rd, Mercerville, NJ"
+    },
+    "restaurant": {
+        "id": "1102",
+        "restaurantName": "Sabor Cubano",
+        "restaurantLocation": "12 Beautiful Rd, Mercerville, NJ"
+    }
+}
 ``` 
 
 Basically you need to go to the restaurant location, pick up the order and deliver it to the customer location
