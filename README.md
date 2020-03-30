@@ -47,4 +47,4 @@ Suppose you are a driver and this is what you received to deliver an order to a 
 }
 ``` 
 
-Basically you need to go to the restaurant location, pick up the order and deliver it to the customer location
+Basically you need to go to the **restaurant location**, pick up the **order number** and deliver it to the **customer location**
