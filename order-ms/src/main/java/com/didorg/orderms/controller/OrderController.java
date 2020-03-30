@@ -16,10 +16,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.didorg.orderms.dto.OrderDTO;
 import com.didorg.orderms.dto.OrderResponse;
+import com.didorg.orderms.dto.api.customer.Customer;
+import com.didorg.orderms.dto.api.restaurant.Restaurant;
 import com.didorg.orderms.mapper.OrderMapper;
 import com.didorg.orderms.mapper.OrderResponseMapper;
 import com.didorg.orderms.persistence.domain.RestaurantOrder;
 import com.didorg.orderms.service.IOrderService;
+import com.didorg.orderms.service.response.customer.ICustomerResponseService;
+import com.didorg.orderms.service.response.restaurant.IRestaurantResponseService;
 
 @RestController
 @RequestMapping(value = "/orders")
@@ -28,22 +32,29 @@ public class OrderController {
 	private final IOrderService service;
 	private final OrderMapper mapper;
 	private final OrderResponseMapper mapperResponse;
+	private final IRestaurantResponseService restaurantService;
+	private final ICustomerResponseService customerService;
 
 	@Autowired
-	public OrderController(IOrderService service, OrderMapper mapper, OrderResponseMapper mapperResponse) {
+	public OrderController(IOrderService service, OrderMapper mapper, OrderResponseMapper mapperResponse,
+			IRestaurantResponseService restaurantService, ICustomerResponseService customerService) {
 		this.service = service;
 		this.mapper = mapper;
 		this.mapperResponse = mapperResponse;
+		this.restaurantService = restaurantService;
+		this.customerService = customerService;
 	}
 
 	@GetMapping(value = "/{orderNumber}")
 	public ResponseEntity<?> getOrder(@PathVariable("orderNumber") String orderNumber) {
 		Optional<RestaurantOrder> existingOrder = service.getOrderByNumber(orderNumber);
 		if (existingOrder.isPresent()) {
-			// TODO: This need to be done by API Composition pattern fetching customer and
-			// restaurant to compose the order
-			OrderResponse orderResponseDTO = this.mapperResponse.mapperOrderResponse(existingOrder.get());
-			return ResponseEntity.status(HttpStatus.OK).body(orderResponseDTO);
+			RestaurantOrder order = existingOrder.get();
+			// API Composition Pattern to compose the Order, fetching Customer and Restaurant
+			Customer apiCustomer = this.customerService.getCustomerById(order.getCustomerId());
+			Restaurant apiRestaurant = this.restaurantService.getRestaurantById(order.getRestaurantId());
+			OrderResponse orderResponse = this.mapperResponse.mapperOrderResponse(order, apiCustomer, apiRestaurant);
+			return ResponseEntity.status(HttpStatus.OK).body(orderResponse);
 		} else {
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Order with Id:" + orderNumber + " Does not exist");
 		}
