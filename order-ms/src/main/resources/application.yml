@@ -1,3 +1,19 @@
 # Server Port
 server:
   port: 8042
+      
+customerRibbon:
+  ribbon:
+    eureka:
+      enabled: false
+    listOfServers: http://localhost:8041,http://localhost:3333
+    ServerListRefreshInterval: 15000
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+    
+restaurantRibbon:
+  ribbon:
+    eureka:
+      enabled: false
+    listOfServers: http://localhost:8040,http://localhost:2222
+    ServerListRefreshInterval: 15000
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
