@@ -3,7 +3,7 @@
 `Java 1.8, Spring Boot, Hibernate, PostgreSQL:`  
 ##### &&:  
 - Store configuration details on cloud using **CloudConfig**                        (OK)
-- **Load balance** requests between microservices using **Ribbon**                  (PENDING)
+- **Load balance** requests between microservices using **Ribbon**                  (OK)
 - **Discover services** in cloud using **Eureka**                                   (PENDING)
 - **Increase resilience** through **Hystrix**                                       (PENDING)
 - Use asynchronous communication to improve performance                             (PENDING)
