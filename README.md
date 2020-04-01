@@ -4,7 +4,8 @@
 ##### &&:  
 - Store configuration details on cloud using **CloudConfig**                        (OK)
 - **Load balance** requests between microservices using **Ribbon**                  (OK)
-- **Discover services** in cloud using **Eureka**                                   (PENDING)
+- **Discover services** in cloud using **Eureka**                                   (OK)
+  - Ribbon with Eureka (OK)
 - **Increase resilience** through **Hystrix**                                       (PENDING)
 - Use asynchronous communication to improve performance                             (PENDING)
 - Create a **API gateway** using **Zuul**                                           (PENDING)
@@ -16,7 +17,10 @@
 **CloudConfig**  
 - ms-config
 - github-spring-cloud-config-server
-****************    
+**************** 
+**Services**   
+- eureka-server
+****************
 **Microservices**    
 - restaurant-ms
 - customer-ms
