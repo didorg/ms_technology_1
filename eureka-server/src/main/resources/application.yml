@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: Eureka
+    
+server:
+  port: 2525 
+
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://localhost:2525/eureka
