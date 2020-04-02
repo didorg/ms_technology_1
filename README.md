@@ -5,12 +5,14 @@
 - Store configuration details on cloud using **CloudConfig**                        (OK)
 - **Load balance** requests between microservices using **Ribbon**                  (OK)
 - **Discover services** in cloud using **Eureka**                                   (OK)
-  - Ribbon with Eureka (OK)
+  - Ribbon with Eureka  (OK)
 - **Increase resilience** through **Hystrix**                                       (OK)
   - Circuit Breaker pattern, Fail Silent approach
 - Use **asynchronous communication** to improve performance                         (OK)
-  - hystrix-javanica: Asynchronous Execution (OK)
-- Create a **API gateway** using **Zuul**                                           (PENDING)
+  - hystrix-javanica: Asynchronous Execution  (OK)
+- Create a **API gateway** using **Zuul**                                           (OK)
+  - Zuul and Ribbon (OK)
+  - Zuul and Hystrix
 - Simplify **REST calls** through **Feign**                                         (PENDING)
 - **Secure microservices** using **OAuth** through **Spring Cloud Security**        (PENDING)
 - **Monitor microservices** through Turbine, **Sleuth and Zipkin**                  (PENDING)
