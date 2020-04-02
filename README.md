@@ -23,7 +23,8 @@
 - github-spring-cloud-config-server
 **************** 
 **Services**   
-- eureka-server
+- eureka-server  
+- zuul-server
 ****************
 **Microservices**    
 - restaurant-ms
