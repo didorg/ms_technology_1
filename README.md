@@ -2,16 +2,16 @@
 ##### Microservices apps that use the following technology:  
 `Java 1.8, Spring Boot, Hibernate, PostgreSQL:`  
 ##### &&:  
-- Store configuration details on cloud using **CloudConfig**                        (OK)
-- **Load balance** requests between microservices using **Ribbon**                  (OK)
-- **Discover services** in cloud using **Eureka**                                   (OK)
+- Store configuration details on cloud using **CloudConfig**  (OK)
+- **Load balance** requests between microservices using **Ribbon**  (OK)
+- **Discover services** in cloud using **Eureka** (OK)
   - Ribbon with Eureka  (OK)
-- **Increase resilience** through **Hystrix**                                       (OK)
-  - Circuit Breaker pattern, Fail Silent approach
-- Use **asynchronous communication** to improve performance                         (OK)
+- **Increase resilience** through **Hystrix** (OK)
+  - Circuit Breaker pattern, Fail Silent approach (OK)
+- Use **asynchronous communication** to improve performance (OK)
   - hystrix-javanica: Asynchronous Execution  (OK)
-- Create a **API gateway** using **Zuul**                                           (OK)
-  - Zuul and Ribbon   (OK)
+- Create a **API gateway** using **Zuul** (OK)
+  - Zuul and Ribbon (OK)
   - Zuul and Hystrix  (OK)
 - Simplify **REST calls** through **Feign**                                         (PENDING)
 - **Secure microservices** using **OAuth** through **Spring Cloud Security**        (PENDING)
