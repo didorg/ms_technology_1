@@ -22,8 +22,7 @@ import com.didorg.orderms.mapper.OrderMapper;
 import com.didorg.orderms.mapper.OrderResponseMapper;
 import com.didorg.orderms.persistence.domain.RestaurantOrder;
 import com.didorg.orderms.service.IOrderService;
-import com.didorg.orderms.service.response.customer.ICustomerResponseService;
-import com.didorg.orderms.service.response.restaurant.IRestaurantResponseService;
+import com.didorg.orderms.service.api.IApiService;
 
 @RestController
 @RequestMapping(value = "/orders")
@@ -32,17 +31,14 @@ public class OrderController {
 	private final IOrderService service;
 	private final OrderMapper mapper;
 	private final OrderResponseMapper mapperResponse;
-	private final IRestaurantResponseService restaurantService;
-	private final ICustomerResponseService customerService;
+	private final IApiService apiService;
 
 	@Autowired
-	public OrderController(IOrderService service, OrderMapper mapper, OrderResponseMapper mapperResponse,
-			IRestaurantResponseService restaurantService, ICustomerResponseService customerService) {
+	public OrderController(IOrderService service, OrderMapper mapper, OrderResponseMapper mapperResponse, IApiService apiService) {
 		this.service = service;
 		this.mapper = mapper;
 		this.mapperResponse = mapperResponse;
-		this.restaurantService = restaurantService;
-		this.customerService = customerService;
+		this.apiService = apiService;
 	}
 
 	@GetMapping(value = "/{orderNumber}")
@@ -51,8 +47,8 @@ public class OrderController {
 		if (existingOrder.isPresent()) {
 			RestaurantOrder order = existingOrder.get();
 			// API Composition Pattern to compose the Order, fetching Customer and Restaurant
-			Customer apiCustomer = this.customerService.getCustomerById(order.getCustomerId());
-			Restaurant apiRestaurant = this.restaurantService.getRestaurantById(order.getRestaurantId());
+			Customer apiCustomer = this.apiService.getCustomerById(order.getCustomerId());
+			Restaurant apiRestaurant = this.apiService.getRestaurantById(order.getRestaurantId());
 			OrderResponse orderResponse = this.mapperResponse.mapperOrderResponse(order, apiCustomer, apiRestaurant);
 			return ResponseEntity.status(HttpStatus.OK).body(orderResponse);
 		} else {

@@ -1,26 +1,26 @@
-package com.didorg.orderms.service.response.restaurant;
+package com.didorg.orderms.service.api.restaurant;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import com.didorg.orderms.dto.api.restaurant.Restaurant;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
-@RefreshScope
 @Service
-public class RestaurantResponseServiceImpl implements IRestaurantResponseService {
-	private static final Logger LOGGER = LoggerFactory.getLogger(RestaurantResponseServiceImpl.class);
+public class RestaurantHystrixService {
+	private static final Logger LOGGER = LoggerFactory.getLogger(RestaurantHystrixService.class);
 	private static final String RIBBON = "http://restaurantMS/";
 	private static final String RESTAURANT = "restaurants/";
 	private final RestTemplate restTemplate;
 
-	public RestaurantResponseServiceImpl(RestTemplate restTemplate) {
+	public RestaurantHystrixService(RestTemplate restTemplate) {
 		this.restTemplate = restTemplate;
 	}
 
+	@HystrixCommand(fallbackMethod = "getRestaurantByIdFallback")
 	public Restaurant getRestaurantById(String id) {
 		LOGGER.info("GET to Restaurant REST HOST URL --> " + RIBBON + RESTAURANT + id);
 		ResponseEntity<Restaurant> entity = restTemplate.getForEntity(RIBBON + RESTAURANT + id, Restaurant.class);
@@ -28,5 +28,9 @@ public class RestaurantResponseServiceImpl implements IRestaurantResponseService
 		LOGGER.info("HTTP Header 'ContentType': " + entity.getHeaders().getContentType());
 
 		return entity.getBody();
+	}
+	
+	public Restaurant getRestaurantByIdFallback(String id) {
+		return new Restaurant();
 	}
 }
