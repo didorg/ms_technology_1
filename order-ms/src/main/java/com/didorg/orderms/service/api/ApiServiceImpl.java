@@ -1,6 +1,8 @@
 package com.didorg.orderms.service.api;
 
 
+import java.util.concurrent.ExecutionException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.stereotype.Service;
@@ -24,11 +26,11 @@ public class ApiServiceImpl implements IApiService {
 	}
 
 
-	public Customer getCustomerById(String id) {
-		return this.customerHystrixService.getCustomerById(id);
+	public Customer getCustomerById(String id) throws InterruptedException, ExecutionException {
+		return this.customerHystrixService.getCustomerByIdAsync(id).get();
 	}
 	
-	public Restaurant getRestaurantById(String id) {
-		return this.restaurantHystrixService.getRestaurantById(id);
+	public Restaurant getRestaurantById(String id) throws InterruptedException, ExecutionException {
+		return this.restaurantHystrixService.getRestaurantByIdAsync(id).get();
 	}
 }

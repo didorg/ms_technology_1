@@ -1,6 +1,7 @@
 package com.didorg.orderms.controller;
 
 import java.util.Optional;
+import java.util.concurrent.ExecutionException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -42,7 +43,7 @@ public class OrderController {
 	}
 
 	@GetMapping(value = "/{orderNumber}")
-	public ResponseEntity<?> getOrder(@PathVariable("orderNumber") String orderNumber) {
+	public ResponseEntity<?> getOrder(@PathVariable("orderNumber") String orderNumber) throws InterruptedException, ExecutionException {
 		Optional<RestaurantOrder> existingOrder = service.getOrderByNumber(orderNumber);
 		if (existingOrder.isPresent()) {
 			RestaurantOrder order = existingOrder.get();
