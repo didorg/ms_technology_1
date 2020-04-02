@@ -16,6 +16,3 @@ zuul:
      path: /orders/**
      strip-prefix: false
      service-id: orderMS
-    
-    
-    
