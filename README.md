@@ -11,8 +11,8 @@
 - Use **asynchronous communication** to improve performance                         (OK)
   - hystrix-javanica: Asynchronous Execution  (OK)
 - Create a **API gateway** using **Zuul**                                           (OK)
-  - Zuul and Ribbon (OK)
-  - Zuul and Hystrix
+  - Zuul and Ribbon   (OK)
+  - Zuul and Hystrix  (OK)
 - Simplify **REST calls** through **Feign**                                         (PENDING)
 - **Secure microservices** using **OAuth** through **Spring Cloud Security**        (PENDING)
 - **Monitor microservices** through Turbine, **Sleuth and Zipkin**                  (PENDING)
