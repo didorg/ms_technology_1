@@ -7,7 +7,8 @@
 - **Discover services** in cloud using **Eureka**                                   (OK)
   - Ribbon with Eureka (OK)
 - **Increase resilience** through **Hystrix**                                       (OK)
-- Use **asynchronous communication** to improve performance                             (OK)
+  - Circuit Breaker pattern, Fail Silent approach
+- Use **asynchronous communication** to improve performance                         (OK)
   - hystrix-javanica: Asynchronous Execution (OK)
 - Create a **API gateway** using **Zuul**                                           (PENDING)
 - Simplify **REST calls** through **Feign**                                         (PENDING)
