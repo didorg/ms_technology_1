@@ -1,0 +1,21 @@
+# Server Port
+server:
+  port: 4444
+
+zuul:
+  routes:
+    customer:
+      path: /customers/**
+      strip-prefix: false
+      service-id: customerMS
+    restaurant:
+     path: /restaurants/**
+     strip-prefix: false
+     service-id: restaurantMS
+    order:
+     path: /orders/**
+     strip-prefix: false
+     service-id: orderMS
+    
+    
+    
