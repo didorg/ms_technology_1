@@ -20,7 +20,7 @@ Implemented only to get `restaurant-ms`. **RestTemplate** is still used to get `
   https://github.com/openzipkin/zipkin
 - **Secure microservices** (PENDING)
   - **Spring Basic Authentication** Securing Cloud Config Server (OK)
-  - **Encrypt** the sensitive values using Postman(Basic Auth and the value to encrypt), you need the key in the cloud-config-server    
+  - **Encrypt** the sensitive values using Postman(Basic Auth and the value to encrypt), you need the key in the cloud-config-server  (OK)      
     - disable CSRF in cloud-config-server to /encrypt & /decrypt  
     - https://github.com/spring-cloud/spring-cloud-config/issues/934#issuecomment-398740472  
   
