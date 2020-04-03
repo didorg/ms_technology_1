@@ -18,7 +18,10 @@ Implemented only to get `restaurant-ms`. **RestTemplate** is still used to get `
 - **Monitor microservices** through Turbine, **Sleuth and Zipkin**  (OK)
   - **Zipkin** (docker run -d -p 9411:9411 openzipkin/zipkin)   (OK)
   https://github.com/openzipkin/zipkin
-- **Secure microservices** using **OAuth** through **Spring Cloud Security**        (PENDING)
+- **Secure microservices** (PENDING)
+  - **Spring Basic Authentication** Securing Cloud Config Server (OK)
+  - **OAuth**
+  
 
 
 ****************
