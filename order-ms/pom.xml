@@ -50,6 +50,11 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
+		</dependency>
 
 		<!-- Javanica project makes easier the use of Hystrix by the introduction of support annotations. -->
 		<!-- Used in Asynchronous Execution -->
@@ -57,7 +62,6 @@
 			<groupId>com.netflix.hystrix</groupId>
 			<artifactId>hystrix-javanica</artifactId>
 		</dependency>
-
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
