@@ -14,6 +14,7 @@
   - Zuul and Ribbon (OK)
   - Zuul and Hystrix  (OK)
 - Simplify **REST calls** through **Feign** (OK)
+  - Implemented only to get `restaurant-ms`. **RestTemplate** is still used to get `customer-ms`
 - **Secure microservices** using **OAuth** through **Spring Cloud Security**        (PENDING)
 - **Monitor microservices** through Turbine, **Sleuth and Zipkin**                  (PENDING)
 
