@@ -15,8 +15,8 @@
   - Zuul and Hystrix  (OK)
 - Simplify **REST calls** through **Feign** (OK)  
 Implemented only to get `restaurant-ms`. **RestTemplate** is still used to get `customer-ms`
-- **Monitor microservices** through Turbine, **Sleuth and Zipkin**                  (PENDING)
-  - **Zipkin** (docker run -d -p 9411:9411 openzipkin/zipkin)   
+- **Monitor microservices** through Turbine, **Sleuth and Zipkin**  (OK)
+  - **Zipkin** (docker run -d -p 9411:9411 openzipkin/zipkin)   (OK)
   https://github.com/openzipkin/zipkin
 - **Secure microservices** using **OAuth** through **Spring Cloud Security**        (PENDING)
 
