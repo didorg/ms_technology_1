@@ -13,7 +13,7 @@
 - Create a **API gateway** using **Zuul** (OK)
   - Zuul and Ribbon (OK)
   - Zuul and Hystrix  (OK)
-- Simplify **REST calls** through **Feign**                                         (PENDING)
+- Simplify **REST calls** through **Feign** (OK)
 - **Secure microservices** using **OAuth** through **Spring Cloud Security**        (PENDING)
 - **Monitor microservices** through Turbine, **Sleuth and Zipkin**                  (PENDING)
 
