@@ -18,7 +18,7 @@ Implemented only to get `restaurant-ms`. **RestTemplate** is still used to get `
 - **Monitor microservices** through Turbine, **Sleuth and Zipkin**  (OK)
   - **Zipkin** (docker run -d -p 9411:9411 openzipkin/zipkin)   (OK)
   https://github.com/openzipkin/zipkin
-- **Secure microservices** (PENDING)
+- **Secure Config** (OK)
   - **Spring Basic Authentication** Securing Cloud Config Server (OK)
   - **Encrypt** the sensitive values using Postman(Basic Auth and the value to encrypt), you need the key in the cloud-config-server  (OK)      
     - disable CSRF in cloud-config-server to /encrypt & /decrypt  
