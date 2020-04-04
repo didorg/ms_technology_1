@@ -2,25 +2,25 @@
 ##### Microservices apps that use the following technology:  
 `Java 1.8, Spring Boot, Hibernate, PostgreSQL:`  
 ##### &&:  
-- Store configuration details on cloud using **CloudConfig**  (OK)
-- **Load balance** requests between microservices using **Ribbon**  (OK)
-- **Discover services** in cloud using **Eureka** (OK)
-  - Ribbon with Eureka  (OK)
-- **Increase resilience** through **Hystrix** (OK)
-  - Circuit Breaker pattern, Fail Silent approach (OK)
-- Use **asynchronous communication** to improve performance (OK)
-  - hystrix-javanica: Asynchronous Execution  (OK)
-- Create a **API gateway** using **Zuul** (OK)
-  - Zuul and Ribbon (OK)
-  - Zuul and Hystrix  (OK)
-- Simplify **REST calls** through **Feign** (OK)  
+- Store configuration details on cloud using **CloudConfig**  
+- **Load balance** requests between microservices using **Ribbon**  
+- **Discover services** in cloud using **Eureka** 
+  - Ribbon with Eureka  
+- **Increase resilience** through **Hystrix** 
+  - Circuit Breaker pattern, Fail Silent approach 
+- Use **asynchronous communication** to improve performance 
+  - hystrix-javanica: Asynchronous Execution  
+- Create a **API gateway** using **Zuul** 
+  - Zuul and Ribbon 
+  - Zuul and Hystrix  
+- Simplify **REST calls** through **Feign**   
 Implemented only to get `restaurant-ms`. **RestTemplate** is still used to get `customer-ms`
-- **Monitor microservices** through Turbine, **Sleuth and Zipkin**  (OK)
-  - **Zipkin** (docker run -d -p 9411:9411 openzipkin/zipkin)   (OK)
+- **Monitor microservices** through Turbine, **Sleuth and Zipkin**  
+  - **Zipkin** (docker run -d -p 9411:9411 openzipkin/zipkin)   
   https://github.com/openzipkin/zipkin
-- **Secure Config** (OK)
-  - **Spring Basic Authentication** Securing Cloud Config Server (OK)
-  - **Encrypt** the sensitive values using Postman(Basic Auth and the value to encrypt), you need the key in the cloud-config-server  (OK)      
+- **Secure Config** 
+  - **Spring Basic Authentication** Securing Cloud Config Server 
+  - **Encrypt** the sensitive values using Postman(Basic Auth and the value to encrypt), you need the key in the cloud-config-server       
     - disable CSRF in cloud-config-server to /encrypt & /decrypt  
     - https://github.com/spring-cloud/spring-cloud-config/issues/934#issuecomment-398740472  
   
