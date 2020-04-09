@@ -1,6 +1,6 @@
 # ms_technology_1
 ##### Microservices apps that use the following technology:  
-`Java 1.8, Spring Boot, Hibernate, PostgreSQL:`  
+`Java 1.8, Spring Boot 2.2.6, Hibernate, PostgreSQL:`  
 ##### &&:  
 - Store configuration details on cloud using **CloudConfig**  
 - **Load balance** requests between microservices using **Ribbon**  
