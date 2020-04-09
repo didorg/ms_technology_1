@@ -26,8 +26,8 @@ Implemented only to get `restaurant-ms`. **RestTemplate** is still used to get `
   
 ****************
 **CloudConfig**  
-- ms-config
-- github-spring-cloud-config-server
+- [ms-config]
+- [github-spring-cloud-config-server]
 **************** 
 **Services**   
 - eureka-server  
@@ -64,3 +64,6 @@ Suppose you are a driver and this is what you received to deliver an order to a 
 ``` 
 
 Basically you need to go to the **restaurant location**, pick up the **order number** and deliver it to the **customer location**
+
+[ms-config]:https://github.com/didorg/ms-config
+[github-spring-cloud-config-server]:https://github.com/didorg/github-spring-cloud-config-server
