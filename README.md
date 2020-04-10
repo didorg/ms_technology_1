@@ -12,7 +12,8 @@
   - hystrix-javanica: Asynchronous Execution  
 - Create a **API gateway** using **Zuul** 
   - Zuul and Ribbon 
-  - Zuul and Hystrix  
+  - Zuul and Hystrix
+  - Cookies and Sensitive Headers (share headers between services in the same system **PENDING...**)
 - Simplify **REST calls** through **Feign**   
 Implemented only to get `restaurant-ms`. **RestTemplate** is still used to get `customer-ms`
 - **Monitor microservices** through Turbine, **Sleuth and Zipkin**  
