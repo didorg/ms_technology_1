@@ -13,7 +13,8 @@
 - Create a **API gateway** using **Zuul** 
   - Zuul and Ribbon 
   - Zuul and Hystrix
-  - Cookies and Sensitive Headers (share headers between services in the same system **PENDING...**)
+  - Cookies and **Sensitive Headers**  
+  [official reference]   
 - Simplify **REST calls** through **Feign**   
 Implemented only to get `restaurant-ms`. **RestTemplate** is still used to get `customer-ms`
 - **Monitor microservices** through Turbine, **Sleuth and Zipkin**  
@@ -68,3 +69,4 @@ Basically you need to go to the **restaurant location**, pick up the **order num
 
 [ms-config]:https://github.com/didorg/ms-config
 [github-spring-cloud-config-server]:https://github.com/didorg/github-spring-cloud-config-server
+[official reference]:https://cloud.spring.io/spring-cloud-static/spring-cloud-netflix/2.2.2.RELEASE/reference/html/#cookies-and-sensitive-headers
