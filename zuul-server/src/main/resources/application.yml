@@ -8,11 +8,16 @@ zuul:
       path: /customers/**
       strip-prefix: false
       service-id: customerMS
+      
     restaurant:
      path: /restaurants/**
      strip-prefix: false
      service-id: restaurantMS
+      
     order:
      path: /orders/**
      strip-prefix: false
      service-id: orderMS
+     # with this configuration, the Authorization headers are allowed
+     sensitive-headers:
+      - Cookie,Set-Cookie #Are a blacklist
