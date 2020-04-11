@@ -6,71 +6,71 @@ import javax.persistence.*;
 
 @Entity
 public class RestaurantOrder {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    
-    @Column(name = "order_number", nullable = false)
-    private String orderNumber;
-    
-    @Column(name = "restaurant_id", nullable = false)
-    private String restaurantId;
-    
-    @Column(name = "customer_id", nullable = false)
-    private String customerId;
-    
-    @Column(name = "created_at", nullable = false)
-    private Date createdAt = new Date();
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
 
-    public RestaurantOrder() {
-    }
+  @Column(name = "order_number", nullable = false)
+  private String orderNumber;
 
-    public RestaurantOrder(Long id, String orderNumber, String restaurantId, String customerId, Date createdAt) {
-		this.id = id;
-		this.orderNumber = orderNumber;
-		this.restaurantId = restaurantId;
-		this.customerId = customerId;
-		this.createdAt = createdAt;
-	}
+  @Column(name = "restaurant_id", nullable = false)
+  private String restaurantId;
 
-	public Long getId() {
-        return id;
-    }
+  @Column(name = "customer_id", nullable = false)
+  private String customerId;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+  @Column(name = "created_at", nullable = false)
+  private Date createdAt = new Date();
 
-	public String getOrderNumber() {
-		return orderNumber;
-	}
+  public RestaurantOrder() {}
 
-	public void setOrderNumber(String orderNumber) {
-		this.orderNumber = orderNumber;
-	}
+  public RestaurantOrder(Long id, String orderNumber, String restaurantId, String customerId,
+      Date createdAt) {
+    this.id = id;
+    this.orderNumber = orderNumber;
+    this.restaurantId = restaurantId;
+    this.customerId = customerId;
+    this.createdAt = createdAt;
+  }
 
-	public String getRestaurantId() {
-		return restaurantId;
-	}
+  public Long getId() {
+    return id;
+  }
 
-	public void setRestaurantId(String restaurantId) {
-		this.restaurantId = restaurantId;
-	}
+  public void setId(Long id) {
+    this.id = id;
+  }
 
-	public String getCustomerId() {
-		return customerId;
-	}
+  public String getOrderNumber() {
+    return orderNumber;
+  }
 
-	public void setCustomerId(String customerId) {
-		this.customerId = customerId;
-	}
+  public void setOrderNumber(String orderNumber) {
+    this.orderNumber = orderNumber;
+  }
 
-	public Date getCreatedAt() {
-		return createdAt;
-	}
+  public String getRestaurantId() {
+    return restaurantId;
+  }
 
-	public void setCreatedAt(Date createdAt) {
-		this.createdAt = createdAt;
-	}
-    
+  public void setRestaurantId(String restaurantId) {
+    this.restaurantId = restaurantId;
+  }
+
+  public String getCustomerId() {
+    return customerId;
+  }
+
+  public void setCustomerId(String customerId) {
+    this.customerId = customerId;
+  }
+
+  public Date getCreatedAt() {
+    return createdAt;
+  }
+
+  public void setCreatedAt(Date createdAt) {
+    this.createdAt = createdAt;
+  }
+
 }

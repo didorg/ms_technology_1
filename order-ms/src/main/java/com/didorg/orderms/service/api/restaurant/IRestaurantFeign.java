@@ -9,7 +9,7 @@ import com.didorg.orderms.dto.api.restaurant.Restaurant;
 
 @FeignClient("restaurantMS")
 public interface IRestaurantFeign {
-	
-	@RequestMapping(value = "/restaurants/{id}")	
-	ResponseEntity<Restaurant> getRestaurantById(@PathVariable("id") String id);
+
+  @RequestMapping(value = "/restaurants/{id}")
+  ResponseEntity<Restaurant> getRestaurantById(@PathVariable("id") String id);
 }

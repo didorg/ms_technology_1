@@ -8,8 +8,8 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 @SpringBootApplication
 public class RestaurantMsApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(RestaurantMsApplication.class, args);
-    }
+  public static void main(String[] args) {
+    SpringApplication.run(RestaurantMsApplication.class, args);
+  }
 
 }
