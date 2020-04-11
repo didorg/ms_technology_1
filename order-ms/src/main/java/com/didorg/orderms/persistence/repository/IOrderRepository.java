@@ -9,5 +9,5 @@ import com.didorg.orderms.persistence.domain.RestaurantOrder;
 
 @Repository
 public interface IOrderRepository extends PagingAndSortingRepository<RestaurantOrder, Long> {
-	Optional<RestaurantOrder> findByOrderNumber(String orderNumber);
+  Optional<RestaurantOrder> findByOrderNumber(String orderNumber);
 }

@@ -7,5 +7,5 @@ import java.util.Optional;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
 public interface ICustomerRepository extends PagingAndSortingRepository<Customer, Long> {
-	Optional<Customer> findByCustomerName(String customerName);
+  Optional<Customer> findByCustomerName(String customerName);
 }

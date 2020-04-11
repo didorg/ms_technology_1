@@ -10,36 +10,37 @@ import com.didorg.orderms.persistence.domain.RestaurantOrder;
 @Component
 public class OrderResponseMapper {
 
-	public OrderResponse mapperOrderResponse(RestaurantOrder order, Customer apiCustomer, Restaurant apiRestaurant) {
-		OrderResponse oResponse = new OrderResponse();
-		
-		oResponse.setId(order.getId().toString());
-		oResponse.setOrderNumber(order.getOrderNumber());
-		oResponse.setCreatedAt(order.getCreatedAt());
-		oResponse.setCustomer(this.mapperApiCustomerToCustomerResponse(apiCustomer));
-		oResponse.setRestaurant(this.mapperApiRestaurantToRestaurantResponse(apiRestaurant));
-		
-		return oResponse;
-	}
+  public OrderResponse mapperOrderResponse(RestaurantOrder order, Customer apiCustomer,
+      Restaurant apiRestaurant) {
+    OrderResponse oResponse = new OrderResponse();
 
-	private Customer mapperApiCustomerToCustomerResponse(Customer apiCustomer) {
-		Customer customer = new Customer();
-		
-		customer.setId(apiCustomer.getId());
-		customer.setCustomerName(apiCustomer.getCustomerName());
-		customer.setCustomerLocation(apiCustomer.getCustomerLocation());
+    oResponse.setId(order.getId().toString());
+    oResponse.setOrderNumber(order.getOrderNumber());
+    oResponse.setCreatedAt(order.getCreatedAt());
+    oResponse.setCustomer(this.mapperApiCustomerToCustomerResponse(apiCustomer));
+    oResponse.setRestaurant(this.mapperApiRestaurantToRestaurantResponse(apiRestaurant));
 
-		return customer;
-	}
+    return oResponse;
+  }
 
-	private Restaurant mapperApiRestaurantToRestaurantResponse(Restaurant apiRestaurant) {
-		Restaurant restaurant = new Restaurant();
-		
-		restaurant.setId(apiRestaurant.getId());
-		restaurant.setRestaurantName(apiRestaurant.getRestaurantName());
-		restaurant.setRestaurantLocation(apiRestaurant.getRestaurantLocation());
-		
-		return restaurant;
-	}
+  private Customer mapperApiCustomerToCustomerResponse(Customer apiCustomer) {
+    Customer customer = new Customer();
+
+    customer.setId(apiCustomer.getId());
+    customer.setCustomerName(apiCustomer.getCustomerName());
+    customer.setCustomerLocation(apiCustomer.getCustomerLocation());
+
+    return customer;
+  }
+
+  private Restaurant mapperApiRestaurantToRestaurantResponse(Restaurant apiRestaurant) {
+    Restaurant restaurant = new Restaurant();
+
+    restaurant.setId(apiRestaurant.getId());
+    restaurant.setRestaurantName(apiRestaurant.getRestaurantName());
+    restaurant.setRestaurantLocation(apiRestaurant.getRestaurantLocation());
+
+    return restaurant;
+  }
 
 }

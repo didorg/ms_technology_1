@@ -15,22 +15,23 @@ import com.didorg.orderms.service.api.restaurant.RestaurantHystrixService;
 @RefreshScope
 @Service
 public class ApiServiceImpl implements IApiService {
-	
-	private final CustomerHystrixService customerHystrixService;
-	private final RestaurantHystrixService restaurantHystrixService;
-	
-	@Autowired
-	public ApiServiceImpl(CustomerHystrixService customerHystrixService, RestaurantHystrixService restaurantHystrixService) {
-		this.customerHystrixService = customerHystrixService;
-		this.restaurantHystrixService = restaurantHystrixService;
-	}
+
+  private final CustomerHystrixService customerHystrixService;
+  private final RestaurantHystrixService restaurantHystrixService;
+
+  @Autowired
+  public ApiServiceImpl(CustomerHystrixService customerHystrixService,
+      RestaurantHystrixService restaurantHystrixService) {
+    this.customerHystrixService = customerHystrixService;
+    this.restaurantHystrixService = restaurantHystrixService;
+  }
 
 
-	public Customer getCustomerById(String id) throws InterruptedException, ExecutionException {
-		return this.customerHystrixService.getCustomerByIdAsync(id).get();
-	}
-	
-	public Restaurant getRestaurantById(String id) throws InterruptedException, ExecutionException {
-		return this.restaurantHystrixService.getRestaurantByIdAsync(id).get();
-	}
+  public Customer getCustomerById(String id) throws InterruptedException, ExecutionException {
+    return this.customerHystrixService.getCustomerByIdAsync(id).get();
+  }
+
+  public Restaurant getRestaurantById(String id) throws InterruptedException, ExecutionException {
+    return this.restaurantHystrixService.getRestaurantByIdAsync(id).get();
+  }
 }

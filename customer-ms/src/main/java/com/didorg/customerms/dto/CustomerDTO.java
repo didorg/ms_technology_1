@@ -1,35 +1,35 @@
 package com.didorg.customerms.dto;
 
 public class CustomerDTO {
-	
-	private String id, customerName, customerLocation;
-	
-	public CustomerDTO() {}
 
-	public String getId() {
-		return id;
-	}
+  private String id, customerName, customerLocation;
 
-	public void setId(String id) {
-		this.id = id;
-	}
+  public CustomerDTO() {}
 
-	public String getCustomerName() {
-		return customerName;
-	}
+  public String getId() {
+    return id;
+  }
 
-	public void setCustomerName(String customerName) {
-		this.customerName = customerName;
-	}
+  public void setId(String id) {
+    this.id = id;
+  }
 
-	public String getCustomerLocation() {
-		return customerLocation;
-	}
+  public String getCustomerName() {
+    return customerName;
+  }
 
-	public void setCustomerLocation(String customerLocation) {
-		this.customerLocation = customerLocation;
-	}
-	
-	
+  public void setCustomerName(String customerName) {
+    this.customerName = customerName;
+  }
+
+  public String getCustomerLocation() {
+    return customerLocation;
+  }
+
+  public void setCustomerLocation(String customerLocation) {
+    this.customerLocation = customerLocation;
+  }
+
+
 
 }
