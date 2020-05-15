@@ -1,5 +1,5 @@
 # Microservices application   
-## Java 8, Spring Boot 2.2.6, Hibernate, PostgreSQL  
+### Java 8, Spring Boot 2.2.6, Hibernate, PostgreSQL  
 #### &&:  
 - Store configuration details on cloud using **CloudConfig**  
 - **Load balance** requests between microservices using **Ribbon**  
