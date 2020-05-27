@@ -1,4 +1,4 @@
-# Microservices application   
+# Java Microservices   
 ### Java 8, Spring Boot 2.2.6, Hibernate, PostgreSQL  
 #### &&:  
 - Store configuration details on cloud using **CloudConfig**. 
