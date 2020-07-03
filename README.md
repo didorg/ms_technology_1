@@ -26,14 +26,19 @@ Implemented only to get `restaurant-ms`. **RestTemplate** is still used to get `
     - https://github.com/spring-cloud/spring-cloud-config/issues/934#issuecomment-398740472 
   
 ****************
+External to `ms_technology_1`  
+
 **CloudConfig**  
 - [ms-config]
 - [github-spring-cloud-config-server]
 **************** 
+Inside `ms_technology_1`   
+
 **Services**   
 - eureka-server  
 - zuul-server
-****************
+
+
 **Microservices**    
 - restaurant-ms
 - customer-ms
