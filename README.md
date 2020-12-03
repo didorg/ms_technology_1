@@ -40,7 +40,7 @@ Inside `ms_technology_1`
 
 
 **Microservices**    
-- **order-ms** 
+- `order-ms` 
 - restaurant-ms
 - customer-ms  
 ****************
