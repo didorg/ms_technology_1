@@ -1,5 +1,5 @@
 # Java Microservices   
-### Java 8, Spring Boot 2.3.1, Hibernate, PostgreSQL    
+### Java 8, Spring Boot, Hibernate, PostgreSQL    
 - Store configuration details on cloud using **CloudConfig**. 
 - **Load balance** requests between microservices using **Ribbon**.  
 - **Discover services** in cloud using **Eureka**. 
